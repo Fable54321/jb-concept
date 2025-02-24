@@ -1,0 +1,162 @@
+@use '../../../Styles/Abstracts/variables' as *;
+
+.navbar {
+    height: fit-content;
+    width: 100%;
+    font-family: $ff-primary;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-family: "ModerratPersonalUseOnlyMed", sans-serif;
+        padding-block: $sz-125;
+        padding-inline: $sz-525;
+
+        @media(max-width: $mw-mobile) {
+            padding: 0;
+        }
+
+        &__logo {
+            height: 100px;
+
+            @media(max-width: $mw-mobile) {
+                height: 75px;
+            }
+        }
+
+        &__title {
+            font-size: $fs-250;
+            color: $clr-accent-gold-700;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media(max-width: $mw-mobile) {
+                position: relative;
+                font-size: $fs-150;
+                transform: none;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        background: linear-gradient(90deg, $clr-accent-gold-1000 15%, $clr-accent-gold-700 35%, $clr-accent-gold-700 65%, $clr-accent-gold-1000 85%);
+        font-size: $fs-125;
+        position: relative;
+
+        @media (max-width: $mw-mobile) {
+            font-size: $fs-125;
+            display: flex;
+            justify-content: center;
+            min-height: 43px;
+            position: relative;
+        }
+
+        &__links {
+            display: flex;
+            justify-content: center;
+            gap: $sz-200;
+
+            @media (max-width: $mw-mobile) {
+                top: -2%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-block: $sz-075;
+                color: $clr-neutral-1000;
+                transition: height 0.7s ease-in-out;
+                height: 30px;
+                width: 99%;
+                text-align: center;
+
+                &--open {
+                    position: absolute;
+                    z-index: 10;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding-inline: $sz-125;
+                    height: 400px;
+                    background-color: $clr-neutral-1000;
+                    color: $clr-accent-gold-700;
+                    border-bottom: 1px solid hsl(28, 43%, 69%);
+                    border-inline: 1px solid hsl(28, 43%, 69%);
+                    transition: height 0.7s ease-in-out;
+                }
+            }
+        }
+
+        &__link {
+            padding: .75rem;
+            font-family: $ff-primary;
+
+            @media(max-width: $mw-mobile) {
+                padding: 0;
+
+                &--1,
+                &--2,
+                &--3,
+                &--4 {
+                    transition: opacity 0.2s ease-in-out;
+                }
+
+                &--1 {
+                    transition-delay: 0.25s;
+                }
+
+                &--2 {
+                    transition-delay: 0.5s;
+                }
+
+                &--3 {
+                    transition-delay: 0.75s;
+                }
+
+                &--4 {
+                    transition-delay: 1s;
+                }
+            }
+
+            &:hover {
+                background-color: $clr-neutral-1000;
+                color: $clr-accent-gold-700;
+                padding-inline: .6875rem;
+
+                @media(max-width: $mw-mobile) {
+                    background-color: transparent;
+                    color: $clr-neutral-1000;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__button {
+            display: none;
+
+            @media(max-width: $mw-mobile) {
+                display: block;
+                position: absolute;
+                left: 85%;
+                top: 50%;
+                z-index: 11;
+                width: 20px;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

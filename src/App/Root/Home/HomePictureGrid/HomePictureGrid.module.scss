@@ -1,0 +1,133 @@
+@use '../../../../Styles/Abstracts/variables' as *;
+
+
+.picture-grid {
+
+    margin-top: $sz-500;
+    padding-bottom: $sz-250;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__title {
+        margin-inline: auto;
+        font-family: 'Lexend Mega', sans-serif;
+        text-align: center;
+        font-weight: 200;
+        font-size: $fs-275;
+        padding-block: $sz-100;
+        color: $clr-neutral-200;
+        border-bottom: 1px solid $clr-accent-gold-700;
+        border-top: 1px solid $clr-accent-gold-700;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+        @media(max-width: $mw-mobile) {
+            font-size: $fs-200;
+            width: 90%;
+        }
+
+      
+
+
+    }
+
+    &__grid {
+        margin-top: $sz-250;
+        width: 90%;
+        display: grid;
+        grid-template-areas: "a  c e"
+                             "a  c e"
+                             "b  d f" ;
+        gap: 0;
+        row-gap: 0;
+        justify-items: center;
+        align-items: center;
+        background-color: $clr-neutral-1000;
+        padding-block: 0;
+        transition: opacity 0.7s ease-in-out 0.25s;
+
+
+        @media(max-width: $mw-mobile) {
+            grid-template-areas: "a""b""c""d""e""f";
+            
+        }
+
+        &__item-1 {
+            grid-area: a;
+        }
+
+        &__item-2 {
+            grid-area: b;
+        }
+
+        &__item-3 {
+            grid-area: c;
+        }
+
+        &__item-4 {
+            grid-area: d;
+        }
+
+        &__item-5 {
+            grid-area: e;
+        }
+
+        &__item-6 {
+            grid-area: f;
+        }
+
+        &__item-bg {
+            display: flex;
+            padding-block: $sz-100;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background-color: $clr-neutral-1000;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &--bottom {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-inline: $sz-100;
+                background-color: $clr-neutral-1000;
+                border-top: 1px solid $clr-accent-gold-700;
+                border-bottom: 1px solid $clr-accent-gold-700;
+                height: 100%;
+                width: 80%;
+                text-align: center;
+                
+                
+            }
+
+            
+        }
+
+        &__item {
+            width: 60%;
+            animation: fadeIn 1s ease-in-out forwards;
+            border-radius: 1%;
+            height: 100%;
+            border: 2px solid $clr-neutral-200;
+        }
+
+        &__text {
+            font-family: $ff-secondary;
+            color: $clr-neutral-200;
+            font-size: $fs-350;
+            width: 100%;
+            padding-block: $sz-100;
+
+            @media(max-width: $mw-mobile) {
+                font-size: $fs-250;
+            }
+        }
+
+
+    }
+
+}

@@ -1,0 +1,100 @@
+.home {
+  margin-top: 1.25rem;
+}
+.home__carousel {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-top: 5px solid rgb(210, 174, 142);
+  padding: 2rem;
+  position: relative;
+}
+@media (max-width: 40em) {
+  .home__carousel {
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    border: none;
+    z-index: -1;
+  }
+}
+.home__carousel__banner {
+  position: absolute;
+  background-color: hsl(224, 79%, 4%);
+  width: 100%;
+  height: 70%;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-block: 5px solid hsl(28, 43%, 59%);
+}
+@media (max-width: 40em) {
+  .home__carousel__banner {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100%;
+    border-block: none;
+    border-inline: 5px solid hsl(28, 43%, 59%);
+  }
+}
+.home__carousel__text--wrapper {
+  margin-block: 4.5rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 2rem;
+}
+@media (max-width: 40em) {
+  .home__carousel__text--wrapper {
+    margin: 0;
+    padding-block: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.home__carousel__text {
+  width: 70%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media (max-width: 40em) {
+  .home__carousel__text {
+    width: 80%;
+    font-family: "ModerratPersonalUseOnlyMed", sans-serif;
+    font-size: 1rem;
+  }
+}
+.home__carousel__image {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 20px 0px hsl(224, 79%, 4%);
+}
+@media (max-width: 40em) {
+  .home__carousel__image {
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px white;
+  }
+}
+.home__carousel__button--wrapper {
+  width: 100%;
+  background: linear-gradient(90deg, hsl(28, 43%, 49%) 15%, rgb(210, 174, 142) 35%, rgb(210, 174, 142) 65%, hsl(28, 43%, 49%) 85%);
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.home__carousel__button {
+  width: 18px;
+  height: 18px;
+  border-radius: 100vw;
+  background-color: white;
+}/*# sourceMappingURL=Home.module.css.map */

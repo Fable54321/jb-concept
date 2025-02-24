@@ -1,0 +1,125 @@
+.navbar {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+.navbar__top {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "ModerratPersonalUseOnlyMed", sans-serif;
+  padding-block: 1.25rem;
+  padding-inline: 5.25rem;
+}
+@media (max-width: 40em) {
+  .navbar__top {
+    padding: 0;
+  }
+}
+.navbar__top__logo {
+  height: 100px;
+}
+@media (max-width: 40em) {
+  .navbar__top__logo {
+    height: 75px;
+  }
+}
+.navbar__top__title {
+  font-size: 2.5rem;
+  color: rgb(210, 174, 142);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 40em) {
+  .navbar__top__title {
+    position: relative;
+    font-size: 1.5rem;
+    transform: none;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+.navbar__bottom {
+  width: 100%;
+  background: linear-gradient(90deg, hsl(28, 43%, 49%) 15%, rgb(210, 174, 142) 35%, rgb(210, 174, 142) 65%, hsl(28, 43%, 49%) 85%);
+  font-size: 1.25rem;
+}
+@media (max-width: 40em) {
+  .navbar__bottom {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    min-height: 43px;
+    position: relative;
+  }
+}
+.navbar__bottom__links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+@media (max-width: 40em) {
+  .navbar__bottom__links {
+    top: 125%;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    color: hsl(224, 79%, 4%);
+    height: 100px;
+    transition: "height 0.5s ease-in-out";
+    width: 50%;
+    text-align: center;
+  }
+  .navbar__bottom__links--open {
+    top: 25%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding-inline: 1.25rem;
+    position: absolute;
+    height: 280px;
+    background-color: hsl(224, 79%, 4%);
+    color: rgb(210, 174, 142);
+    border-bottom: 1px solid hsl(28, 43%, 69%);
+    border-inline: 1px solid hsl(28, 43%, 69%);
+    padding-bottom: 1.25rem;
+    transition: height 0.5s ease-in-out;
+  }
+}
+.navbar__bottom__link {
+  padding: 0.75rem;
+}
+@media (max-width: 40em) {
+  .navbar__bottom__link {
+    padding: 0;
+  }
+}
+.navbar__bottom__link:hover {
+  background-color: hsl(224, 79%, 4%);
+  color: rgb(210, 174, 142);
+  padding-inline: 0.6875rem;
+}
+.navbar__bottom__button {
+  display: none;
+}
+@media (max-width: 40em) {
+  .navbar__bottom__button {
+    display: block;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 20px;
+    position: absolute;
+    left: 67%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}/*# sourceMappingURL=NavBar.module.css.map */
