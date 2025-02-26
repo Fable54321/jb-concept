@@ -2,6 +2,7 @@
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
+  font-family: "Lexend Mega", sans-serif;
 }
 .navbar__top {
   display: flex;
@@ -11,7 +12,7 @@
   padding-block: 1.25rem;
   padding-inline: 5.25rem;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__top {
     padding: 0;
   }
@@ -19,7 +20,7 @@
 .navbar__top__logo {
   height: 100px;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__top__logo {
     height: 75px;
   }
@@ -31,7 +32,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__top__title {
     position: relative;
     font-size: 1.5rem;
@@ -43,10 +44,11 @@
 }
 .navbar__bottom {
   width: 100%;
-  background: linear-gradient(90deg, hsl(28, 43%, 49%) 15%, rgb(210, 174, 142) 35%, rgb(210, 174, 142) 65%, hsl(28, 43%, 49%) 85%);
+  background: linear-gradient(90deg, #b37947 15%, rgb(210, 174, 142) 35%, rgb(210, 174, 142) 65%, #b37947 85%);
   font-size: 1.25rem;
+  position: relative;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__bottom {
     font-size: 1.25rem;
     display: flex;
@@ -60,42 +62,59 @@
   justify-content: center;
   gap: 2rem;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__bottom__links {
-    top: 125%;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    color: hsl(224, 79%, 4%);
-    height: 100px;
-    transition: "height 0.5s ease-in-out";
-    width: 50%;
-    text-align: center;
-  }
-  .navbar__bottom__links--open {
-    top: 25%;
+    top: -2%;
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    gap: 1.25rem;
-    padding-inline: 1.25rem;
+    padding-block: 0.75rem;
+    color: hsl(224, 79%, 4%);
+    transition: height 0.7s ease-in-out;
+    height: 30px;
+    width: 99%;
+    text-align: center;
+  }
+  .navbar__bottom__links--open {
     position: absolute;
-    height: 280px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 1.25rem;
+    height: 400px;
     background-color: hsl(224, 79%, 4%);
     color: rgb(210, 174, 142);
     border-bottom: 1px solid hsl(28, 43%, 69%);
     border-inline: 1px solid hsl(28, 43%, 69%);
-    padding-bottom: 1.25rem;
-    transition: height 0.5s ease-in-out;
+    transition: height 0.7s ease-in-out;
   }
 }
 .navbar__bottom__link {
   padding: 0.75rem;
+  font-family: "Lexend Mega", sans-serif;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__bottom__link {
     padding: 0;
+  }
+  .navbar__bottom__link--1, .navbar__bottom__link--2, .navbar__bottom__link--3, .navbar__bottom__link--4 {
+    transition: opacity 0.2s ease-in-out;
+  }
+  .navbar__bottom__link--1 {
+    transition-delay: 0.25s;
+  }
+  .navbar__bottom__link--2 {
+    transition-delay: 0.5s;
+  }
+  .navbar__bottom__link--3 {
+    transition-delay: 0.75s;
+  }
+  .navbar__bottom__link--4 {
+    transition-delay: 1s;
   }
 }
 .navbar__bottom__link:hover {
@@ -103,12 +122,24 @@
   color: rgb(210, 174, 142);
   padding-inline: 0.6875rem;
 }
+@media (max-width: 50em) {
+  .navbar__bottom__link:hover {
+    background-color: transparent;
+    color: hsl(224, 79%, 4%);
+    padding: 0;
+  }
+}
 .navbar__bottom__button {
   display: none;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .navbar__bottom__button {
     display: block;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    z-index: 11;
+    width: 20px;
     background: none;
     color: inherit;
     border: none;
@@ -116,10 +147,6 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    width: 20px;
-    position: absolute;
-    left: 67%;
-    top: 50%;
     transform: translateY(-50%);
   }
 }/*# sourceMappingURL=NavBar.module.css.map */

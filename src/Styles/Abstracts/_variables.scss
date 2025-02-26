@@ -1,13 +1,13 @@
 //colors
 
 $clr-neutral-200: #EAE0D5;
-$clr-neutral-1000 : hsl(224, 79%, 4%);
+$clr-neutral-1000 : rgb(2, 6, 18);
 
 $clr-accent-blue: #118ab2;
 $clr-accent-gold-1000 : #b37947;
 $clr-accent-gold-900 : hsl(28, 43%, 59%);
 
-$clr-accent-gold-700 : rgb(210, 174, 142);
+$clr-accent-gold-700 : #d2ae8e;
 
 
 
@@ -20,6 +20,9 @@ $ff-secondary: 'Tangerine', sans-serif;
 
 //font-sizes;
 
+$fs-050: .5rem;
+$fs-075: .75rem;
+$fs-080: .8rem;
 $fs-100: 1rem;
 $fs-125: 1.25rem;
 $fs-150: 1.5rem;
@@ -42,7 +45,9 @@ $fs-550: 5.5rem;
 $fs-575: 5.75rem;
 
 
-// spacings 
+// spacings
+$sz-010 : .1rem; 
+$sz-025: .25rem;
 $sz-050: .5rem;
 $sz-075: .75rem;
 $sz-100: 1rem;

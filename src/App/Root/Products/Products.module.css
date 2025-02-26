@@ -1,0 +1,266 @@
+.products__title--wrapper {
+  margin-top: 2rem;
+  color: #EAE0D5;
+  font-family: "Lexend Mega", sans-serif;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.products__title {
+  text-align: center;
+  font-size: 1.75rem;
+  position: relative;
+  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+}
+@media (min-width: 50em) {
+  .products__title {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}
+.products__title::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 40%;
+  background-color: transparent;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid rgb(210, 174, 142);
+  border-bottom: 1px solid rgb(210, 174, 142);
+}
+.products__subtitle {
+  padding-left: 1rem;
+  width: 60%;
+  font-size: 1.25rem;
+  justify-self: center;
+  font-weight: 200;
+  position: relative;
+}
+@media (min-width: 50em) {
+  .products__subtitle {
+    font-size: 1.75rem;
+    width: 72%;
+    font-weight: 400;
+  }
+}
+@media (min-width: 50em) {
+  .products__grid {
+    width: min(95%, 1522px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "z y" "x w" "v v";
+  }
+}
+.products__grid__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b" "d c" "e f" "h g" "i j";
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 50em) {
+  .products__grid__item {
+    grid-template-areas: "a b" "c d" "f e" "h g" "j i";
+  }
+  .products__grid__item--1 {
+    grid-area: z;
+  }
+  .products__grid__item--2 {
+    grid-area: y;
+  }
+  .products__grid__item--3 {
+    grid-area: x;
+  }
+  .products__grid__item--4 {
+    grid-area: w;
+  }
+  .products__grid__item--5 {
+    grid-area: v;
+    width: 50%;
+    justify-self: center;
+  }
+}
+.products__grid__item__title {
+  border: none;
+  text-align: center;
+  position: relative;
+  display: flex;
+}
+@media (min-width: 50em) {
+  .products__grid__item__title {
+    font-size: max(1.5rem, 2vw);
+  }
+}
+.products__grid__item__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-block: 1px solid rgb(210, 174, 142);
+  height: min(160px, 45vw);
+  width: 30%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: transparent;
+}
+@media (min-width: 50em) {
+  .products__grid__item__title::before {
+    min-height: 240px;
+    border-block: 2px solid rgb(210, 174, 142);
+  }
+}
+.products__grid__item__title--1 {
+  grid-area: a;
+}
+.products__grid__item__title--2 {
+  grid-area: c;
+}
+.products__grid__item__title--3 {
+  grid-area: e;
+}
+.products__grid__item__title--4 {
+  grid-area: g;
+}
+.products__grid__item__title--5 {
+  grid-area: i;
+}
+.products__grid__item__img {
+  width: 100%;
+  animation: fade forwards 1s ease-in-out;
+}
+@media (min-width: 50em) {
+  .products__grid__item__img {
+    min-height: min(441.53px, 9vw);
+  }
+}
+.products__grid__item__img--1 {
+  grid-area: b;
+}
+.products__grid__item__img--2 {
+  grid-area: d;
+}
+.products__grid__item__img--3 {
+  grid-area: f;
+}
+.products__grid__item__img--4 {
+  grid-area: h;
+}
+.products__grid__item__img--5 {
+  grid-area: j;
+}
+@media (min-width: 50em) {
+  .products__grid__item__img--5 {
+    min-height: min(441.53px, 10vw);
+  }
+}
+.products__grid__item__button--1, .products__grid__item__button--2, .products__grid__item__button--3, .products__grid__item__button--4, .products__grid__item__button--5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  z-index: 10;
+  position: absolute;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 30%;
+  border-radius: 0.5rem;
+  color: rgb(210, 174, 142);
+  font-family: "Lexend Mega", sans-serif;
+  box-shadow: 1px 0px 5px hsl(28, 43%, 49%);
+  font-size: 0.75rem;
+  bottom: 6%;
+  transform: translateY(50%);
+  transition: all 1s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 30em) {
+  .products__grid__item__button--1, .products__grid__item__button--2, .products__grid__item__button--3, .products__grid__item__button--4, .products__grid__item__button--5 {
+    bottom: 25%;
+  }
+}
+@media (min-width: 50em) {
+  .products__grid__item__button--1, .products__grid__item__button--2, .products__grid__item__button--3, .products__grid__item__button--4, .products__grid__item__button--5 {
+    bottom: 30%;
+    font-size: 1rem;
+    padding-block: 0.5rem;
+    width: 150px;
+  }
+}
+.products__grid__item__button--1, .products__grid__item__button--3, .products__grid__item__button--5 {
+  left: 25%;
+  transform: translate(-50%, 50%);
+}
+.products__grid__item__button--2, .products__grid__item__button--4 {
+  left: 75%;
+  transform: translate(-50%, 50%);
+}
+@media (min-width: 50em) {
+  .products__grid__item__button--1, .products__grid__item__button--2 {
+    left: 25%;
+  }
+}
+@media (min-width: 50em) {
+  .products__grid__item__button--3, .products__grid__item__button--4, .products__grid__item__button--5 {
+    left: 75%;
+  }
+}
+.products__grid__item__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: open forwards 1s ease-in-out;
+}
+@media (min-width: 50em) {
+  .products__grid__item__description {
+    min-height: 441.53px;
+  }
+}
+.products__grid__item__description::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-block: 1px solid rgb(210, 174, 142);
+  min-height: 150px;
+  width: 40%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: transparent;
+}
+.products__grid__item__description__text {
+  position: relative;
+  text-align: center;
+  animation: fade forwards 1.75s ease-in-out;
+}
+@media (max-width: 50em) {
+  .products__grid__item__description__text {
+    font-size: 0.8rem;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes open {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Products.module.css.map */

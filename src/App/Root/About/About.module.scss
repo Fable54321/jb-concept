@@ -1,0 +1,94 @@
+@use '../../../Styles/Abstracts/variables' as *;
+@use '../../../Styles/Abstracts/mixins' as m;
+
+.about {
+
+    &__title--wrapper {
+        margin-top: $sz-200;
+        display: flex;
+        flex-direction: column;
+        gap: $sz-050;
+          
+    }
+
+    &__title--main {
+        @include m.title-main;
+        color: $clr-accent-gold-700;
+        letter-spacing: 2px;
+        
+    }
+
+    &__title--secondary {
+        font-size: $fs-075;
+        color: $clr-neutral-200;
+        font-family: $ff-primary;
+        text-align: center;
+    }
+
+
+  &__content {
+
+      margin-top: $sz-100;    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     
+
+    &__img--wrapper {
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding-block: $sz-300;
+        
+    }  
+
+    &__img {
+
+       
+       width: 45%;
+       
+    }  
+
+    &__img--legend {
+
+        margin-top: $sz-100;
+        font-size: $fs-100;
+        color: $clr-neutral-200;
+        font-family: $ff-primary;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: $sz-050;
+        
+    }
+
+    &__img--border {
+        position: absolute;
+        height: 85%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 50%;
+        border-block: 1px solid $clr-accent-gold-700;
+    }
+    
+   &__text--wrapper {
+       padding-inline: $sz-100;
+       padding-bottom: $sz-100;
+   } 
+
+   &__text {
+       padding-inline: $sz-050;
+       padding-block: $sz-100;
+       background-color: $clr-neutral-1000;
+       border: 2px solid $clr-neutral-200;
+       border-radius: $sz-050;
+       font-size: $fs-080;
+       color: $clr-neutral-200;
+       font-family: $ff-primary;
+       text-align: left;
+       box-shadow: 2px 0px 10px 0px rgba($clr-neutral-200, 0.5), -2px 0px 10px 0px rgba($clr-neutral-200, 0.5); ;
+   } 
+}
+}

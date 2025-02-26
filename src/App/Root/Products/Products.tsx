@@ -1,7 +1,7 @@
 import styles from "./Products.module.scss";
 
 import { productsList } from "../../../assets/products";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Products = () => {
 
@@ -20,6 +20,20 @@ const Products = () => {
     "1",
     "1"
   ]);
+
+  const [minHeight, setMinHeight] = useState(0);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      const imgHeight = document.querySelector<HTMLImageElement>(`.${styles["products__grid__item__img--1"]}`)?.clientHeight;
+      setMinHeight(imgHeight || 0);
+    }
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
+  
 
   const handleClick = (e: React.MouseEvent<HTMLElement>, id: number) => {
     
@@ -60,6 +74,7 @@ const Products = () => {
           Que vous <br /> recherchiez :
         </h4>
         <div className={styles["products__grid"]}>
+          
           {productsList.map((product) => (
             <div
               style={{
@@ -77,20 +92,42 @@ const Products = () => {
               }`}
               key={product.id}
             >
+              <div
+                style={{
+                  left: descrtiption[product.id as keyof typeof descrtiption]
+                    ? "50%"
+                    : "",
+                  width: descrtiption[product.id as keyof typeof descrtiption]
+                    ? "35%"
+                    : "",  
+                  }}
+               className= {styles[`products__grid__border--${product.id}`]}>
+
+              </div>
+             
+              <h4
+                style={{
+                  display: descrtiption[product.id as keyof typeof descrtiption]
+                    ? "none"
+                    : "block",
+                }}
+                className={`${styles["products__grid__item__title"]} ${
+                  styles[`products__grid__item__title--${product.id}`]
+                }`}
+              >
+                {product.name}
+             
+              </h4>
               <button
                 id={product.id.toString()}
                 style={{
                   left: descrtiption[product.id as keyof typeof descrtiption]
                     ? "50%"
                     : "",
-                  right: descrtiption[product.id as keyof typeof descrtiption]
-                    ? "0%"
-                    : "",
-                  transform: descrtiption[
-                    product.id as keyof typeof descrtiption
-                  ]
-                    ? "translateX(-50%)"
-                    : "",
+                  bottom: descrtiption[product.id as keyof typeof descrtiption]
+                    ? "22%"
+                    : "",  
+               
                   opacity: opacity[product.id -1],
                 }}
                 type="button"
@@ -106,18 +143,6 @@ const Products = () => {
                     : "Voir Plus"}
                 </p>
               </button>
-              <h4
-                style={{
-                  display: descrtiption[product.id as keyof typeof descrtiption]
-                    ? "none"
-                    : "block",
-                }}
-                className={`${styles["products__grid__item__title"]} ${
-                  styles[`products__grid__item__title--${product.id}`]
-                }`}
-              >
-                {product.name}
-              </h4>
               <img
                 style={{
                   display: descrtiption[product.id as keyof typeof descrtiption]
@@ -136,6 +161,7 @@ const Products = () => {
                   display: descrtiption[product.id as keyof typeof descrtiption]
                     ? "flex"
                     : "none",
+                  minHeight: `${minHeight}px`,  
                 }}
                 className={styles["products__grid__item__description"]}
               >

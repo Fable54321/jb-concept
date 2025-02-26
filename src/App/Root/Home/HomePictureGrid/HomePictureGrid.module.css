@@ -1,0 +1,104 @@
+.picture-grid {
+  margin-top: 5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture-grid__title {
+  margin-inline: auto;
+  font-family: "Lexend Mega", sans-serif;
+  text-align: center;
+  font-weight: 200;
+  font-size: 2.75rem;
+  padding-block: 1rem;
+  color: #EAE0D5;
+  border-bottom: 1px solid rgb(210, 174, 142);
+  border-top: 1px solid rgb(210, 174, 142);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 50em) {
+  .picture-grid__title {
+    font-size: 2rem;
+    width: 90%;
+  }
+}
+.picture-grid__grid {
+  margin-top: 2.5rem;
+  width: 90%;
+  display: grid;
+  grid-template-areas: "a  c e" "a  c e" "b  d f";
+  gap: 0;
+  row-gap: 0;
+  justify-items: center;
+  align-items: center;
+  background-color: hsl(224, 79%, 4%);
+  padding-block: 0;
+  transition: opacity 0.7s ease-in-out 0.25s;
+}
+@media (max-width: 50em) {
+  .picture-grid__grid {
+    grid-template-areas: "a" "b" "c" "d" "e" "f";
+  }
+}
+.picture-grid__grid__item-1 {
+  grid-area: a;
+}
+.picture-grid__grid__item-2 {
+  grid-area: b;
+}
+.picture-grid__grid__item-3 {
+  grid-area: c;
+}
+.picture-grid__grid__item-4 {
+  grid-area: d;
+}
+.picture-grid__grid__item-5 {
+  grid-area: e;
+}
+.picture-grid__grid__item-6 {
+  grid-area: f;
+}
+.picture-grid__grid__item-bg {
+  display: flex;
+  padding-block: 1rem;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(224, 79%, 4%);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.picture-grid__grid__item-bg--bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+  background-color: hsl(224, 79%, 4%);
+  border-top: 1px solid rgb(210, 174, 142);
+  border-bottom: 1px solid rgb(210, 174, 142);
+  height: 100%;
+  width: 80%;
+  text-align: center;
+}
+.picture-grid__grid__item {
+  width: 60%;
+  animation: fadeIn 1s ease-in-out forwards;
+  border-radius: 1%;
+  height: 100%;
+  border: 2px solid #EAE0D5;
+}
+.picture-grid__grid__text {
+  font-family: "Tangerine", sans-serif;
+  color: #EAE0D5;
+  font-size: 3.5rem;
+  width: 100%;
+  padding-block: 1rem;
+}
+@media (max-width: 50em) {
+  .picture-grid__grid__text {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=HomePictureGrid.module.css.map */

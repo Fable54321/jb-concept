@@ -29,8 +29,8 @@ switch(currentPath){
   case '/produits':
     usablePath = 'Nos Produits';
     break;
-  case '/contact':
-    usablePath = 'Contactez-nous';
+  case '/a_propos':
+    usablePath = 'À propos';
     break;
 }
 
@@ -78,7 +78,7 @@ const handleClick = () => {
               transition
             }}
             className={`${styles["navbar__bottom__link"]} ${styles["navbar__bottom__link--2"]}`}
-            to="/about"
+            to="/a_propos"
           >
             À propos
           </Link>
