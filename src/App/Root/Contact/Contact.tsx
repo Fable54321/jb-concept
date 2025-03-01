@@ -23,7 +23,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   });
   const data = await response.json();
 
-  console.log(data);
+  
    
   if(data.success){
     setResult("Message envoyé");
@@ -33,6 +33,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setResult(data.message);
   }
 
+  console.log(result);
   
 };
 
