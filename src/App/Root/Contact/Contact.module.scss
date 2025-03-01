@@ -1,0 +1,62 @@
+@use '../../../Styles/Abstracts/variables' as *;
+
+
+.contact {
+    margin-top: $sz-500;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $clr-accent-gold-700;
+    font-family: $ff-primary;
+
+    &__title {
+        font-size: $fs-200;
+        text-align: center;
+        color: $clr-neutral-200;
+        letter-spacing: 2px;
+    }
+
+    &__form {
+        margin-inline: auto;
+        margin-top: $sz-200;
+        width: min(100%, 500px);
+        display: flex;
+        flex-direction: column;
+        gap: $sz-200;
+        align-items: center;
+
+        &__input--wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $sz-050;
+            width: 100%;
+            font-size: $fs-125;
+
+            input, textarea {
+                padding: $sz-025;
+                width: 90%;
+                font-size: $fs-100;
+                border-radius: $sz-050;
+            }
+        }
+
+        &__textarea {
+            resize: none;
+            min-height: $sz-900;
+        }
+
+
+        &__button {
+
+            color: $clr-neutral-200;
+            padding: $sz-075;
+            border-radius: $sz-075;
+            box-shadow: $clr-accent-gold-700 0px 50px 100px -20px, $clr-accent-gold-700 0px 30px 60px -30px, $clr-accent-gold-700 0px -2px 6px 0px inset, $clr-accent-gold-700 0px 2px 0px -1px inset, $clr-accent-gold-700 0px -2px 14px 0px;
+        }
+    }
+
+
+   
+}

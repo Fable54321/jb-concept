@@ -13,8 +13,8 @@
   font-size: 2.75rem;
   padding-block: 1rem;
   color: #EAE0D5;
-  border-bottom: 1px solid rgb(210, 174, 142);
-  border-top: 1px solid rgb(210, 174, 142);
+  border-bottom: 1px solid #d2ae8e;
+  border-top: 1px solid #d2ae8e;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@
   row-gap: 0;
   justify-items: center;
   align-items: center;
-  background-color: hsl(224, 79%, 4%);
+  background-color: rgb(2, 6, 18);
   padding-block: 0;
   transition: opacity 0.7s ease-in-out 0.25s;
 }
@@ -67,7 +67,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: hsl(224, 79%, 4%);
+  background-color: rgb(2, 6, 18);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -76,9 +76,9 @@
   justify-content: center;
   align-items: center;
   padding-inline: 1rem;
-  background-color: hsl(224, 79%, 4%);
-  border-top: 1px solid rgb(210, 174, 142);
-  border-bottom: 1px solid rgb(210, 174, 142);
+  background-color: rgb(2, 6, 18);
+  border-top: 1px solid #d2ae8e;
+  border-bottom: 1px solid #d2ae8e;
   height: 100%;
   width: 80%;
   text-align: center;

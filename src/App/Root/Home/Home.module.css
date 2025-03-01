@@ -3,7 +3,7 @@
 }
 .home__carousel {
   background-color: white;
-  border-top: 5px solid rgb(210, 174, 142);
+  border-top: 5px solid #d2ae8e;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -17,7 +17,7 @@
 }
 .home__carousel__image {
   aspect-ratio: 16/9;
-  box-shadow: 0px 0px 20px 0px hsl(224, 79%, 4%);
+  box-shadow: 0px 0px 20px 0px rgb(2, 6, 18);
   transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
   width: 50%;
 }
@@ -40,7 +40,7 @@
   }
 }
 .home__carousel__banner {
-  background-color: hsl(224, 79%, 4%);
+  background-color: rgb(2, 6, 18);
   border-block: 5px solid hsl(28, 43%, 59%);
   height: 70%;
   left: 50%;
@@ -97,15 +97,15 @@
   }
   .home__carousel__text--1 {
     padding-top: 0.5rem;
-    border-top: 1px solid rgb(210, 174, 142);
+    border-top: 1px solid #d2ae8e;
   }
   .home__carousel__text--3 {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgb(210, 174, 142);
+    border-bottom: 1px solid #d2ae8e;
   }
 }
 .home__carousel__button--wrapper {
-  background: linear-gradient(90deg, #b37947 15%, rgb(210, 174, 142) 35%, rgb(210, 174, 142) 65%, #b37947 85%);
+  background: linear-gradient(90deg, #b37947 15%, #d2ae8e 35%, #d2ae8e 65%, #b37947 85%);
   display: flex;
   align-items: center;
   gap: 0.5rem;

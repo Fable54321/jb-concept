@@ -32,6 +32,9 @@ switch(currentPath){
   case '/a_propos':
     usablePath = 'À propos';
     break;
+  case '/contact':
+    usablePath = 'Contactez-nous';
+    break;  
 }
 
 
