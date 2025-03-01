@@ -79,7 +79,7 @@ const Products = () => {
             <div
               style={{
                 display: descrtiption[product.id as keyof typeof descrtiption]
-                  ? "block"
+                  ? "flex"
                   : "grid",
                 alignItems: descrtiption[
                   product.id as keyof typeof descrtiption

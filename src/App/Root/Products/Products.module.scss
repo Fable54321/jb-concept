@@ -138,7 +138,7 @@
             "i j";
         align-items: center;
         position: relative;
-
+        justify-content: center;
 
         @media(min-width: $mw-mobile) {
 
@@ -316,7 +316,7 @@
                 }
 
             }
-        }
+        }  
 
         &__description {
             display: flex;
