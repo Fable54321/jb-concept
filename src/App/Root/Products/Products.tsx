@@ -21,17 +21,18 @@ const Products = () => {
     "1"
   ]);
 
-  const [minHeight, setMinHeight] = useState(0);
+  const [minHeight, setMinHeight] = useState(177);
 
   useEffect(() => {
     const updateHeight = () => {
-      const imgHeight = document.querySelector<HTMLImageElement>(`.${styles["products__grid__item__img--1"]}`)?.clientHeight;
-      setMinHeight(imgHeight || 0);
+      const imgHeight = document.querySelector<HTMLImageElement>(`.${styles["products__grid__item"]}`)?.clientHeight ?? 0;
+      setMinHeight(imgHeight);
     }
     window.addEventListener("resize", updateHeight);
+    setTimeout(updateHeight, 100);
     updateHeight();
-    // return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [descrtiption]);
 
   
 
