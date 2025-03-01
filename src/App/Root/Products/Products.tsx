@@ -30,7 +30,7 @@ const Products = () => {
     }
     window.addEventListener("resize", updateHeight);
     updateHeight();
-    return () => window.removeEventListener("resize", updateHeight);
+    // return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   
