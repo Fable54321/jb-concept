@@ -4,6 +4,7 @@ import julie from '../../../assets/photo--julie.jpeg'
 const About = () => {
   return (
     <section className={styles["about"]}>
+      <h1 className={styles["sr-only"]}>À propos</h1>
       <div className={styles["about__title--wrapper"]}>
         <h2 className={styles["about__title--main"]}>JB Concept </h2>
         <h3 className={styles["about__title--secondary"]}>

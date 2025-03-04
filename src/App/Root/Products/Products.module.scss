@@ -4,6 +4,9 @@
 
 .products {
 
+    .sr-only {
+        @include m.sr-only;
+    }
     
 
     &__title--wrapper {
@@ -273,9 +276,7 @@
 
                 @media(min-width: $mw-mobile) {
                     top: 75%;
-                   
                     font-size: $fs-075;
-                    
                     border-radius: $sz-075;
                     width: 30%;
                 }

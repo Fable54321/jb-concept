@@ -1,5 +1,9 @@
 @use '../../../Styles/Abstracts/variables' as *;
+@use '../../../Styles/Abstracts/mixins' as m;
 
+.sr-only {
+    @include m.sr-only;
+}
 
 .contact {
     margin-top: $sz-500;
@@ -9,6 +13,48 @@
     align-items: center;
     color: $clr-accent-gold-700;
     font-family: $ff-primary;
+    &__success--container {
+       //flex implied from tsx
+       border: 2px solid $clr-accent-gold-700;
+       border-radius: $sz-075; 
+       position: absolute;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: column; 
+       width: min(90vw,400px);
+       aspect-ratio: 1/1;
+       background-color: rgba($clr-neutral-1000, 0.99);
+       animation: slideIn forwards 1s ease-in-out;
+       transition: all 0.2s ease-in-out;
+       z-index: 100;
+    }
+
+    &__success {
+        font-size: $fs-150;
+        color: $clr-neutral-200;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__success--button {
+        
+        color: $clr-neutral-200;
+        padding: $sz-075;
+        border-radius: $sz-075;
+        box-shadow: $clr-accent-gold-700 0px 50px 100px -20px, $clr-accent-gold-700 0px 30px 60px -30px, $clr-accent-gold-700 0px -2px 6px 0px inset, $clr-accent-gold-700 0px 2px 0px -1px inset, $clr-accent-gold-700 0px -2px 14px 0px;
+        border: none;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(12%);
+        }
+    }
 
     &__title {
         font-size: $fs-200;
@@ -33,6 +79,7 @@
             gap: $sz-050;
             width: 100%;
             font-size: $fs-125;
+            position: relative;
 
             input, textarea {
                 padding: $sz-025;
@@ -46,6 +93,17 @@
             resize: none;
             min-height: $sz-900;
         }
+
+        &__error {
+            font-size: $fs-075;
+            color: #DF2935;
+            text-align: center;
+            position: absolute;
+            top: 100%;
+            
+        }
+
+
 
 
         &__button {

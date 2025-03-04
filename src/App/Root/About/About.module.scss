@@ -1,6 +1,11 @@
 @use '../../../Styles/Abstracts/variables' as *;
 @use '../../../Styles/Abstracts/mixins' as m;
 
+
+.sr-only {
+    @include m.sr-only;
+}
+
 .about {
 
     &__title--wrapper {
@@ -47,6 +52,7 @@
         padding-left: $sz-300;
         position: relative;
         margin-bottom: $sz-400;
+        padding-block: $sz-300;
 
         &--deco {
             position: absolute;
@@ -129,13 +135,11 @@
    &__text--wrapper {
        width: min(92%, 560px);
        
-       padding-bottom: $sz-200;
-       //border-right: 1px solid rgba($clr-accent-gold-700, 0.5);
-       //border-left: 1px solid rgba($clr-accent-gold-700, 0.5);
+       //padding-bottom: $sz-200;
+      
        display: flex;
        flex-direction: column;
        align-items: center;
-       //gap: $sz-050;
        position: relative;
 
        @media(min-width: $mw-mobile) {

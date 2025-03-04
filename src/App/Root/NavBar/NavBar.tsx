@@ -11,6 +11,7 @@ const NavBar = () => {
 const currentPath: string = useLocation().pathname
 const isMobile: boolean = useMediaQuery({ query: '(max-width: 50em)' })
 const [dropDown, setDropDown] = useState(false);
+const [transition, setTransition] = useState('');
 
 useEffect(() => {
   if(dropDown){
@@ -20,25 +21,17 @@ useEffect(() => {
 // eslint-disable-next-line react-hooks/exhaustive-deps
 },[currentPath])
 
-let usablePath = '';
+const usablePaths: Record<string, string> = {
+  '/': 'Accueil',
+  '/produits': 'Nos Produits',
+  '/a_propos': 'À propos',
+  '/contact': 'Contactez-nous',
+};
 
-switch(currentPath){
-  case '/':
-    usablePath = 'Accueil';
-    break;
-  case '/produits':
-    usablePath = 'Nos Produits';
-    break;
-  case '/a_propos':
-    usablePath = 'À propos';
-    break;
-  case '/contact':
-    usablePath = 'Contactez-nous';
-    break;  
-}
+const usablePath = usablePaths[currentPath] || '';
 
 
-const [transition, setTransition] = useState('');
+
 
 const handleClick = () => {
   if(!dropDown){
@@ -53,7 +46,7 @@ const handleClick = () => {
 
 
   return (
-    <header className={styles["navbar"]}>
+    <header aria-label='la barre de navigation' className={styles["navbar"]}>
       <div className={styles["navbar__top"]}>
         <img
           className={styles["navbar__top__logo"]}
@@ -64,11 +57,14 @@ const handleClick = () => {
       </div>
       <div className={styles["navbar__bottom"]}>
         <div className={`${styles["navbar__bottom__links"]} ${dropDown ? styles["navbar__bottom__links--open"] : ""}`}>
-          <p className={styles["navbar__bottom__link"]} style={{display: dropDown || !isMobile ? 'none' : 'block'}}>{usablePath}</p>
+          <h2 className={styles["navbar__bottom__link"]} style={{display: dropDown || !isMobile ? 'none' : 'block'}}>{usablePath}</h2>
           <Link
+            role="lien du menu"
+            aria-current={currentPath === '/' ? 'page' : undefined}
             style={{
               opacity: dropDown || !isMobile ? 1 : 0,
-              transition
+              transition,
+              pointerEvents: dropDown || !isMobile ? 'auto' : 'none'
             }}
             className={`${styles["navbar__bottom__link"]} ${styles["navbar__bottom__link--1"]}`}
             to="/"
@@ -76,9 +72,12 @@ const handleClick = () => {
             Accueil
           </Link>
           <Link
+            role="lien du menu"
+            aria-current={currentPath === '/produits' ? 'page' : undefined}
             style={{
               opacity: dropDown || !isMobile ? 1 : 0,
-              transition
+              transition,
+              pointerEvents: dropDown || !isMobile ? 'auto' : 'none'
             }}
             className={`${styles["navbar__bottom__link"]} ${styles["navbar__bottom__link--2"]}`}
             to="/a_propos"
@@ -86,9 +85,12 @@ const handleClick = () => {
             À propos
           </Link>
           <Link
+            role="lien du menu"
+            aria-current={currentPath === '/contact' ? 'page' : undefined}
             style={{
               opacity: dropDown || !isMobile ? 1 : 0,
-              transition
+              transition,
+              pointerEvents: dropDown || !isMobile ? 'auto' : 'none'
             }}
             className={`${styles["navbar__bottom__link"]} ${styles["navbar__bottom__link--3"]}`}
             to="/contact"
@@ -96,9 +98,12 @@ const handleClick = () => {
             Contactez-nous
           </Link>
           <Link
+            role="lien du menu"
+            aria-current={currentPath === '/produits' ? 'page' : undefined}
             style={{
               opacity: dropDown || !isMobile ? 1 : 0,
-              transition
+              transition,
+              pointerEvents: dropDown || !isMobile ? 'auto' : 'none'
             }}
             className={`${styles["navbar__bottom__link"]} ${styles["navbar__bottom__link--4"]}`}
             to="/produits"

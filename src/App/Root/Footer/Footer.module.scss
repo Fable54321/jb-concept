@@ -1,0 +1,58 @@
+@use "../../../Styles/Abstracts/variables" as *;
+
+
+
+.footer {
+    margin-top: $sz-300;
+    padding-top: $sz-200;
+    padding-bottom: $sz-150;
+    background-color: $clr-neutral-200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $ff-primary;
+
+    &__title {
+        font-size: $fs-150;
+
+        @media(min-width: $mw-mobile) {
+            font-size: $fs-175;
+        }
+    }
+
+    &__content--grid {
+        margin-top: $sz-100;
+        gap: $sz-050;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: $fs-075;
+
+       @media(min-width: $mw-mobile){
+         margin-top: $sz-150;
+         font-size: $fs-100;
+        
+         
+       
+       }
+    }
+
+    &__social {
+        display: flex;
+        margin-top: $sz-150;
+        justify-content: center;
+        gap: $sz-050;
+
+        @media(min-width: $mw-mobile) {
+            margin-top: $sz-175;
+            gap: $sz-100;
+        }
+
+        a {
+            width: 8%;
+
+            @media(min-width: $mw-mobile) {
+                width: 1.75%;
+            }
+        }
+    }
+}

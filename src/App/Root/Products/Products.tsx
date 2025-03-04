@@ -67,13 +67,14 @@ const Products = () => {
 
   return (
     <section className={styles["products"]}>
+      <h1 className={styles["sr-only"]}>Produits</h1>
       <article className={styles["products__title--wrapper"]}>
-        <h3 className={styles["products__title"]}>
+        <h2 className={styles["products__title"]}>
           Il y en a pour tous les goûts!
-        </h3>
-        <h4 className={styles["products__subtitle"]}>
+        </h2>
+        <h3 className={styles["products__subtitle"]}>
           Que vous <br /> recherchiez :
-        </h4>
+        </h3>
         <div className={styles["products__grid"]}>
           
           {productsList.map((product) => (
@@ -106,7 +107,7 @@ const Products = () => {
 
               </div>
              
-              <h4
+              <h3
                 style={{
                   display: descrtiption[product.id as keyof typeof descrtiption]
                     ? "none"
@@ -118,7 +119,7 @@ const Products = () => {
               >
                 {product.name}
              
-              </h4>
+              </h3>
               <button
                 id={product.id.toString()}
                 style={{
