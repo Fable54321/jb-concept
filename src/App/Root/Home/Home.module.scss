@@ -153,11 +153,11 @@
         font-family: $ff-primary;
         text-align: center;
         font-size: $fs-300;
-        text-shadow: 2px 2px $clr-accent-gold-700;
-        font-weight: 200;
+        font-weight: 700;
 
         @media(max-width: $mw-mobile) {
             font-size: $fs-200;
+            line-height: $sz-250;
 
         }
     }
