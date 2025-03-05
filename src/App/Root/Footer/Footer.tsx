@@ -15,9 +15,9 @@ const Footer = () => {
           <Link to="/produits" className={styles['footer__content--grid__link']}>Produits</Link>
       </div>
       <div className={styles['footer__social']}>
-        <Link to=""><img src={facebook} alt="" /></Link>
-        <Link to=""><img src={gmail} alt="" /></Link>
-        <Link to=""><img src={linkedIn} alt="" /></Link>
+        <a href="https://www.facebook.com/profile.php?id=61568670801420" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="" /></a>
+        <a href="mailto:ju_beaulieu@hotmail.com" target="_blank" rel="noopener noreferrer"><img src={gmail} alt="" /></a>
+        <a href="https://www.linkedin.com/in/jb-concept-inc-v%C3%AAtements-et-objets-promotionnels-3973a4291/" target="_blank" rel="noopener noreferrer"><img src={linkedIn} alt="" /></a>
       </div>
     </footer>
   )
