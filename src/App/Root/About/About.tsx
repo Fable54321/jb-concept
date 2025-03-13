@@ -29,7 +29,7 @@ const About = () => {
         <div className={styles["about__content__text--wrapper"]}>
           <p className={styles["about__content__text"]}>
             JB Concept Inc. est fier de représenter la troisième génération d'une
-            tradition familiale dans le domaine des uniformes.
+            tradition familiale dans le domaine des vêtements et des uniformes.
           </p>
           <div className={styles["about__content__text--deco"]}></div>
           <p className={styles["about__content__text"]}>
