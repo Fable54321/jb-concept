@@ -67,11 +67,11 @@ const Products = () => {
 
   return (
     <section className={styles["products"]}>
-      <h1 className={styles["sr-only"]}>Produits</h1>
+      <h2 className={styles["sr-only"]}>Produits</h2>
       <article className={styles["products__title--wrapper"]}>
-        <h2 className={styles["products__title"]}>
+        <h3 className={styles["products__title"]}>
           Il y en a pour tous les goûts!
-        </h2>
+        </h3>
         <h3 className={styles["products__subtitle"]}>
           Que vous <br /> recherchiez :
         </h3>

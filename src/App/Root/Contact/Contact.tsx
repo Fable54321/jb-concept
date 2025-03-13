@@ -103,7 +103,7 @@ const closeSuccess = () => {
  
   return (
     <section className={styles.contact}>
-      <h1 className={styles['sr-only']}>Contactez-nous</h1>
+      <h2 className={styles['sr-only']}>Contactez-nous</h2>
       <div style={{display, opacity: isSuccess ? 1 : 0, transform: isSuccess ? 'translateY(0)' : 'translateY(-100%)'}} className={styles['contact__success--container']}>
         <p className={styles['contact__success']}>Votre message a été envoyé avec succès! </p> 
         <button className={styles['contact__success--button']} onClick={closeSuccess}>Fermer</button>

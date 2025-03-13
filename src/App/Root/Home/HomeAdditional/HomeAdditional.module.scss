@@ -1,0 +1,116 @@
+@use '../../../../Styles/Abstracts/variables' as *;
+
+
+
+
+.home-additional {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+    
+
+
+    &__title {
+        font-family: $ff-primary;
+        font-size: $fs-200;
+        text-align: center;
+        color: $clr-neutral-200;
+        padding-bottom: $sz-250;
+        width: min(100%, 700px);
+        font-weight: 700;
+
+        @media(min-width: 70em){
+            padding-top: $sz-250;
+            width: 80%;
+            font-size: $fs-300;
+        }
+    }
+
+    &__img--wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min(100%, 600px);
+        position: relative;
+
+        &::after{
+           display: none;
+
+            @media(min-width: 70em){
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 30%;
+                height: 100%;
+                background-color: transparent;
+                border-block: 1px solid $clr-accent-gold-700;
+            }
+        }
+
+        @media(min-width: 70em){
+            width: min(90%, 1300px);
+            flex-direction: row;
+            justify-content: center;
+            gap: $sz-300;
+            padding-block: $sz-200;
+            
+        }
+       
+    }
+
+    &__img{
+        width: 80%;
+        border: 2px solid $clr-neutral-200;
+
+        @media(min-width: 70em){
+            width: min(60%,482px);
+        }
+    }
+
+
+    &__text {
+        font-family: $ff-primary;
+        font-size: $fs-100;
+        width: 85%;
+        line-height: 1.5;
+        color: $clr-neutral-200;
+        padding-block: $sz-100;
+        margin-top: $sz-250;
+        position: relative;
+        
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 25%;
+            height: 100%;
+            background-color: transparent;
+            border-block: 1px solid $clr-accent-gold-700;
+
+            @media(min-width: 70em){
+                display: none;
+            }
+        }
+
+        @media(min-width: 70em){
+            width: 95%;
+            font-size: $fs-125;
+            margin-top: 0;
+            padding-block: $sz-200;
+        }
+    }
+}
+
+strong {
+    color: $clr-accent-gold-hgh;
+}

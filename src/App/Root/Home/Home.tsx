@@ -4,6 +4,7 @@ import image2 from '../../../assets/photo--2.png'
 import image3  from '../../../assets/image--3.jpg'
 import HomePictureGrid from './HomePictureGrid/HomePictureGrid'
 import { useState } from 'react'
+import HomeAdditional from './HomeAdditional/HomeAdditional'
 
 const Home = () => {
 
@@ -49,7 +50,7 @@ const [translateX, setTranslateX] = useState(0);
 
   return (
     <section className={styles["home"]}>
-        <h1 className={styles["sr-only"]}>Page d'accueil</h1>
+        <h2 className={styles["sr-only"]}>Page d'accueil</h2>
         <article className={styles['home__carousel']}>
             <div className={styles['home__carousel__banner']}></div>
                 <img src={srcs[position-1]} alt="" className={styles['home__carousel__image']} style={{opacity: opacity, transform: `translateX(${translateX}%)`}} />
@@ -72,6 +73,7 @@ const [translateX, setTranslateX] = useState(0);
         </div>
         <h2 className={styles["home__title"]}	>Votre solution pour des vêtements personalisés de qualité </h2>
         <HomePictureGrid />
+        <HomeAdditional />
     </section>
   )
 }
