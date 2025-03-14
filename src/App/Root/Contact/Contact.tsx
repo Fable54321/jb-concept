@@ -66,7 +66,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setResult("Envoi...");
     const formData = new FormData(e.currentTarget);
 
-    formData.append("access_key", "ce06bdf6-e8e7-418a-9d6c-781ba8c97e76");
+    formData.append("access_key", "8f337fa6-4fc0-4655-a7d4-96e3b2b69557");
 
     const response= await fetch("https://api.web3forms.com/submit", {
       method: "POST",
