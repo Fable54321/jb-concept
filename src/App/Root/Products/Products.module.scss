@@ -142,8 +142,11 @@
         align-items: center;
         position: relative;
         justify-content: center;
+        height: fit-content;
 
         @media(min-width: $mw-mobile) {
+
+            
 
             grid-template-areas: "a b"
                 "c d"
@@ -219,9 +222,11 @@
         &__img {
             width: 100%;
             animation: fade forwards 1s ease-in-out;
+            border-block: 15px solid white;
 
-
-
+            @media(min-width: $mw-mobile) {
+                border: none;
+            }
 
             &--1 {
                 grid-area: b;
@@ -327,6 +332,7 @@
             position: relative;
             
 
+         
            
 
             &__text {
@@ -336,6 +342,7 @@
 
                 @media(max-width: $mw-mobile) {
                     font-size: $fs-080;
+                    margin-top: -10%;
                 }
 
                 @keyframes fade {
@@ -363,7 +370,28 @@
                 }
 
             }
+
+            &__catalogue {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                gap: $sz-075;
+                margin-top: $sz-075;
+                font-size: $fs-080;
+                text-decoration: underline;
+                padding-inline: $sz-100;
+
+                @media(max-width: $mw-mobile) {
+                    margin-top: $sz-050;
+                    font-size: $fs-075;
+                }
+                
+            }
         }
+
+       
     }
 
 }

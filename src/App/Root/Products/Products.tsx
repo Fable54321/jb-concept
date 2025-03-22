@@ -76,7 +76,6 @@ const Products = () => {
           Que vous <br /> recherchiez :
         </h3>
         <div className={styles["products__grid"]}>
-          
           {productsList.map((product) => (
             <div
               style={{
@@ -88,6 +87,7 @@ const Products = () => {
                 ]
                   ? "center"
                   : "",
+               
               }}
               className={`${styles["products__grid__item"]} ${
                 styles[`products__grid__item--${product.id}`]
@@ -101,12 +101,11 @@ const Products = () => {
                     : "",
                   width: descrtiption[product.id as keyof typeof descrtiption]
                     ? "35%"
-                    : "",  
-                  }}
-               className= {styles[`products__grid__border--${product.id}`]}>
+                    : "",
+                }}
+                className={styles[`products__grid__border--${product.id}`]}
+              ></div>
 
-              </div>
-             
               <h3
                 style={{
                   display: descrtiption[product.id as keyof typeof descrtiption]
@@ -118,7 +117,6 @@ const Products = () => {
                 }`}
               >
                 {product.name}
-             
               </h3>
               <button
                 id={product.id.toString()}
@@ -127,10 +125,10 @@ const Products = () => {
                     ? "50%"
                     : "",
                   bottom: descrtiption[product.id as keyof typeof descrtiption]
-                    ? "22%"
-                    : "",  
-               
-                  opacity: opacity[product.id -1],
+                    ? "0%"
+                    : "",
+
+                  opacity: opacity[product.id - 1],
                 }}
                 type="button"
                 aria-label="cliquer pour plus d'informations"
@@ -163,16 +161,26 @@ const Products = () => {
                   display: descrtiption[product.id as keyof typeof descrtiption]
                     ? "flex"
                     : "none",
-                  minHeight: `${minHeight}px`,  
+                  minHeight: `${minHeight}px`,
                 }}
-                className={styles["products__grid__item__description"]}
+                className={styles["products__grid__item__description"]} 
               >
                 <p
                   className={styles["products__grid__item__description__text"]}
                 >
                   {product.description}
                 </p>
+                <div
+                  className={ 
+                    styles["products__grid__item__description__catalogue"]
+                  }
+                  style={{ display: "flex" }}
+                >
+                  {product.catalogues &&
+                    product.catalogues.map((catalogue) => <p>{catalogue}</p>)}
+                </div>
               </div>
+              
             </div>
           ))}
         </div>

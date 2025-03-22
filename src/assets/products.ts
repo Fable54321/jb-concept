@@ -1,15 +1,16 @@
-import produit1 from '../assets/produits--1.png'
+import produit1 from '../assets/produits --1.png'
 import produit2 from '../assets/produits--2.png'
-import produit3 from '../assets/produits--3-cropped.png'
+import produit3 from '../assets/produits--3.jpg'
 import produit4 from '../assets/produits--4.jpg'
-import produit5 from '../assets/produits--5.jpg'
-
+import produit5 from '../assets/produits--5.jpg' 
+ 
 export const productsList = [
     {
         id: 1,
         name: 'Des Vêtements',
         description: "Tous types de vêtements allant du t-shirt au manteau d'hiver en passant par les pantalons propres et les chemises",    
-        image: produit1
+        image: produit1,
+        //catalogues: ['Catalogue test 1', 'Catalogue test 2', 'Catalogue test 3']
     },
     {
         id: 2,
