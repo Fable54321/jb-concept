@@ -142,7 +142,7 @@
         align-items: center;
         position: relative;
         justify-content: center;
-        height: fit-content;
+       
 
         @media(min-width: $mw-mobile) {
 
@@ -168,6 +168,7 @@
 
             &--4 {
                 grid-area: w;
+                
             }
 
             &--5 {
@@ -226,6 +227,8 @@
 
             @media(min-width: $mw-mobile) {
                 border: none;
+
+               
             }
 
             &--1 {
@@ -242,11 +245,13 @@
 
             &--4 {
                 grid-area: h;
+                border: none;
+                
             }
 
             &--5 {
                 grid-area: j;
-
+                
 
 
             }
@@ -342,7 +347,7 @@
 
                 @media(max-width: $mw-mobile) {
                     font-size: $fs-080;
-                    margin-top: -10%;
+                    //margin-top: -10%; put it back when the links are added
                 }
 
                 @keyframes fade {

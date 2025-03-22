@@ -21,6 +21,11 @@
         }
     }
 
+    @media(min-width: $mw-mobile) {
+        h2 {
+            font-size: $fs-125;
+        }
+    }
     &__content--grid {
         margin-top: $sz-100;
         gap: $sz-050;

@@ -1,7 +1,8 @@
 import produit1 from '../assets/produits --1.png'
 import produit2 from '../assets/produits--2.png'
 import produit3 from '../assets/produits--3.jpg'
-import produit4 from '../assets/produits--4.jpg'
+import produit4 from '../assets/produits --4.jpg'
+import produit4_2 from '../assets/produits--4.jpg'
 import produit5 from '../assets/produits--5.jpg' 
  
 export const productsList = [
@@ -28,7 +29,8 @@ export const productsList = [
         id: 4,
         name: 'Des Produits locaux',
         description: "Il n'a jamais été aussi important d'encourager l'économie locale.",    
-        image: produit4
+        image: produit4,
+        image2: produit4_2
     },
     {
         id: 5,

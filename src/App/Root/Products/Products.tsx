@@ -2,6 +2,7 @@ import styles from "./Products.module.scss";
 
 import { productsList } from "../../../assets/products";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Products = () => {
 
@@ -20,6 +21,8 @@ const Products = () => {
     "1",
     "1"
   ]);
+
+  const isMobile = useMediaQuery({ query: "(max-width: 50em)" });
 
   const [minHeight, setMinHeight] = useState(177);
 
@@ -143,18 +146,20 @@ const Products = () => {
                     : "Voir Plus"}
                 </p>
               </button>
-              <img
-                style={{
-                  display: descrtiption[product.id as keyof typeof descrtiption]
-                    ? "none"
-                    : "block",
-                }}
-                className={`${styles["products__grid__item__img"]} ${
-                  styles[`products__grid__item__img--${product.id}`]
-                }`}
-                src={product.image}
-                alt={product.name}
-              />
+             
+                <img
+                  style={{
+                    display: descrtiption[product.id as keyof typeof descrtiption]
+                      ? "none"
+                      : "block",
+                  }}
+                  className={`${styles["products__grid__item__img"]} ${
+                    styles[`products__grid__item__img--${product.id}`]
+                  }`}
+                  src={product.image2 && !isMobile ? product.image2 : product.image}
+                  alt={product.name}
+                />
+              
 
               <div
                 style={{
@@ -176,8 +181,8 @@ const Products = () => {
                   }
                   style={{ display: "flex" }}
                 >
-                  {product.catalogues &&
-                    product.catalogues.map((catalogue) => <p>{catalogue}</p>)}
+                  {/* {product.catalogues &&
+                    product.catalogues.map((catalogue) => <p>{catalogue}</p>)} */}
                 </div>
               </div>
               

@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <footer className={styles['footer']}>
       <h1 className={styles['footer__title']}>JB Concept inc</h1>
+      <h2>514-295-7979</h2>
       <div className={styles['footer__content--grid']}>
           <Link to="/a_propos" className={styles['footer__content--grid__link']}>A propos</Link>
           <Link to="/contact" className={styles['footer__content--grid__link']}>Contactez-nous</Link>
