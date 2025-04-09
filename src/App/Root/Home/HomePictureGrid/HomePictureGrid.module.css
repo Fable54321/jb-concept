@@ -13,8 +13,8 @@
   font-size: 2.75rem;
   padding-block: 1rem;
   color: #EAE0D5;
-  border-bottom: 1px solid #d2ae8e;
-  border-top: 1px solid #d2ae8e;
+  border-bottom: 1px solid hsl(28, 43%, 69%);
+  border-top: 1px solid hsl(28, 43%, 69%);
   width: 80%;
   display: flex;
   justify-content: center;
@@ -77,8 +77,8 @@
   align-items: center;
   padding-inline: 1rem;
   background-color: rgb(2, 6, 18);
-  border-top: 1px solid #d2ae8e;
-  border-bottom: 1px solid #d2ae8e;
+  border-top: 1px solid hsl(28, 43%, 69%);
+  border-bottom: 1px solid hsl(28, 43%, 69%);
   height: 100%;
   width: 80%;
   text-align: center;

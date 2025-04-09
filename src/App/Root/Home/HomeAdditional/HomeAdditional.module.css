@@ -1,0 +1,102 @@
+.home-additional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-additional__title {
+  font-family: "Lexend Mega", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #EAE0D5;
+  padding-bottom: 2.5rem;
+  width: min(100%, 700px);
+  font-weight: 700;
+}
+@media (min-width: 70em) {
+  .home-additional__title {
+    padding-top: 2.5rem;
+    width: 80%;
+    font-size: 3rem;
+  }
+}
+.home-additional__img--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 600px);
+  position: relative;
+}
+.home-additional__img--wrapper::after {
+  display: none;
+}
+@media (min-width: 70em) {
+  .home-additional__img--wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 30%;
+    height: 100%;
+    background-color: transparent;
+    border-block: 1px solid hsl(28, 43%, 69%);
+  }
+}
+@media (min-width: 70em) {
+  .home-additional__img--wrapper {
+    width: min(90%, 1300px);
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding-block: 2rem;
+  }
+}
+.home-additional__img {
+  width: 80%;
+  border: 2px solid #EAE0D5;
+}
+@media (min-width: 70em) {
+  .home-additional__img {
+    width: min(60%, 482px);
+  }
+}
+.home-additional__text {
+  font-family: "Lexend Mega", sans-serif;
+  font-size: 1rem;
+  width: 85%;
+  line-height: 1.5;
+  color: #EAE0D5;
+  padding-block: 1rem;
+  margin-top: 2.5rem;
+  position: relative;
+}
+.home-additional__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 25%;
+  height: 100%;
+  background-color: transparent;
+  border-block: 1px solid hsl(28, 43%, 69%);
+}
+@media (min-width: 70em) {
+  .home-additional__text::after {
+    display: none;
+  }
+}
+@media (min-width: 70em) {
+  .home-additional__text {
+    width: 95%;
+    font-size: 1.25rem;
+    margin-top: 0;
+    padding-block: 2rem;
+  }
+}
+
+strong {
+  color: hsl(28, 56%, 65%);
+}/*# sourceMappingURL=HomeAdditional.module.css.map */

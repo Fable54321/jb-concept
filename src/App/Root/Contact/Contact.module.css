@@ -1,12 +1,102 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 .contact {
+  margin-top: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: hsl(28, 43%, 69%);
+  font-family: "Lexend Mega", sans-serif;
+}
+.contact__success--container {
+  border: 2px solid hsl(28, 43%, 69%);
+  border-radius: 0.75rem;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: min(90vw, 400px);
+  aspect-ratio: 1/1;
+  background-color: rgba(2, 6, 18, 0.99);
+  animation: slideIn forwards 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+.contact__success {
+  font-size: 1.5rem;
   color: #EAE0D5;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact__success--button {
+  color: #EAE0D5;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: hsl(28, 43%, 69%) 0px 50px 100px -20px, hsl(28, 43%, 69%) 0px 30px 60px -30px, hsl(28, 43%, 69%) 0px -2px 6px 0px inset, hsl(28, 43%, 69%) 0px 2px 0px -1px inset, hsl(28, 43%, 69%) 0px -2px 14px 0px;
+  border: none;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(12%);
+  }
+}
+.contact__title {
+  font-size: 2rem;
+  text-align: center;
+  color: #EAE0D5;
+  letter-spacing: 2px;
 }
 .contact__form {
+  margin-inline: auto;
+  margin-top: 2rem;
+  width: min(100%, 500px);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center;
+}
+.contact__form__input--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 1.25rem;
+  position: relative;
+}
+.contact__form__input--wrapper input, .contact__form__input--wrapper textarea {
+  padding: 0.25rem;
+  width: 90%;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.contact__form__textarea {
+  resize: none;
+  min-height: 9rem;
+}
+.contact__form__error {
+  font-size: 0.75rem;
+  color: #DF2935;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+}
+.contact__form__button {
+  color: #EAE0D5;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: hsl(28, 43%, 69%) 0px 50px 100px -20px, hsl(28, 43%, 69%) 0px 30px 60px -30px, hsl(28, 43%, 69%) 0px -2px 6px 0px inset, hsl(28, 43%, 69%) 0px 2px 0px -1px inset, hsl(28, 43%, 69%) 0px -2px 14px 0px;
 }/*# sourceMappingURL=Contact.module.css.map */

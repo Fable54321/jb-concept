@@ -1,9 +1,18 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 .home {
   margin-top: 1.25rem;
 }
 .home__carousel {
   background-color: white;
-  border-top: 5px solid #d2ae8e;
+  border-top: 5px solid hsl(28, 43%, 69%);
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -97,15 +106,15 @@
   }
   .home__carousel__text--1 {
     padding-top: 0.5rem;
-    border-top: 1px solid #d2ae8e;
+    border-top: 1px solid hsl(28, 43%, 69%);
   }
   .home__carousel__text--3 {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #d2ae8e;
+    border-bottom: 1px solid hsl(28, 43%, 69%);
   }
 }
 .home__carousel__button--wrapper {
-  background: linear-gradient(90deg, #b37947 15%, #d2ae8e 35%, #d2ae8e 65%, #b37947 85%);
+  background: linear-gradient(90deg, #b37947 15%, hsl(28, 43%, 69%) 35%, hsl(28, 43%, 69%) 65%, #b37947 85%);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -118,4 +127,18 @@
   border-radius: 100vw;
   height: 18px;
   width: 18px;
+}
+.home__title {
+  margin-top: 5rem;
+  color: #EAE0D5;
+  font-family: "Lexend Mega", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+@media (max-width: 50em) {
+  .home__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }/*# sourceMappingURL=Home.module.css.map */
