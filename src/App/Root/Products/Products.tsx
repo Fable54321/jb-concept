@@ -95,7 +95,7 @@ const Products = () => {
   };
 
   return (
-    <section className={styles["products"]}>
+    <section translate="no" className={styles["products"]}>
       <h2 className={styles["sr-only"]}>Produits</h2>
       <article className={styles["products__title--wrapper"]}>
         <h3 className={styles["products__title"]}>
